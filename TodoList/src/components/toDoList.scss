@@ -1,0 +1,93 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 20px 40px;
+    color: aliceblue;
+    background-color: rgb(227, 63, 63);
+    font-size: 15px;
+    .headerToDo{
+        p{
+            font-size: 30px;
+            padding: 0px;
+            margin: 10px 0px 10px;
+        }
+    }
+    .bodyToDo{
+        ul{
+            padding: 0px;
+            margin: 0px;
+            li{
+                display: flex;
+                list-style: none;
+                justify-content: space-between;
+                padding: 10px 0px;
+                font-size: 20px;
+                div{
+                    input{
+                        margin-right: 10px;
+                    }
+                    span{
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+        .moveItem{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            .swicth-toggle{
+                width: 30px;
+                height: 16px;
+                appearance: none;
+                background-color: white;
+                border-radius: 20px;
+                position: relative;
+                cursor: pointer;
+            }
+            .swicth-toggle::before{
+                content: "";
+                width: 14px;
+                height: 14px;
+                position: absolute;
+                top: 1px;
+                left: 1px;
+                background-color: gray;
+                border-radius: 50%;
+            }
+            .swicth-toggle:checked{
+                background-color: rgb(237, 182, 182);
+            }
+            .swicth-toggle:checked::before{
+                left: 15px;
+            }
+        }
+    }
+    .footerToDo{
+        p{
+            font-size: 25px;
+            margin-bottom: 5px;
+        }
+        .footerAdd{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            input{
+                height: 35px;
+                border: white;
+                width: 200px;
+            }
+            button{
+                height: 37px;
+                width: 100px;
+                background-color: rgb(227, 63, 63);
+                border: 0.5px solid rgb(237, 182, 182);
+                color: white;
+                font-size: 15px;
+                border-radius: 1px;
+                margin-left: 1px;
+            }
+        }
+    }
+}
